@@ -9,7 +9,7 @@ import dao.Dao;
 		name = "AddUserServlet",
 		urlPatterns = {"/add"}
 		)
-public class AddUser extends HttpServlet {
+public class Add.User extends HttpServlet {
 	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
