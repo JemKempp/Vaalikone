@@ -31,7 +31,7 @@ public class CheckServlet extends HttpServlet {
 		
 		dao.close();
 		
-		if ( SecurityUtils.isPasswordOk(hashpw, password, salt) ) {
+		if ( Security.isPasswordOk(hashpw, password, salt) ) {
 			response.getWriter().println("Login success");
 		} else {
 			response.getWriter().println("Login failed");
