@@ -9,7 +9,7 @@ import dao.Dao;
 		name = "AddUserServlet",
 		urlPatterns = {"/add"}
 		)
-public class Add.User extends HttpServlet {
+public class AddUser extends HttpServlet {
 	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -29,8 +29,8 @@ public class Add.User extends HttpServlet {
 		String uname = request.getParameter("username");
 		String password = request.getParameter("password");
 		
-		String salt = SecurityUtils.getSalt();
-		String hashpw = SecurityUtils.getPasswordHashed(password, salt);
+		String salt = Security.getSalt();
+		String hashpw = Security.getPasswordHashed(password, salt);
 		
 		dao.addUser(uname,  hashpw, salt);
 		
