@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: Omistaja
 Build-Jdk: 11.0.14
+=======
+Built-By: Tea
+Build-Jdk: 16.0.2
+>>>>>>> a5efcfe2b36d39a215d9d4707d2c36217f27814b
 Created-By: Maven Integration for Eclipse
 
