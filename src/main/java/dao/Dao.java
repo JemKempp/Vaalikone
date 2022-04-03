@@ -58,7 +58,7 @@ public class Dao {
 			if ( rs.next() ) {
 				result = rs.getString("salt");
 			}
-		} catch (SQLExceotion e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return result;
