@@ -24,8 +24,6 @@ xmlhttp.open("POST", "../php/rekisteroidy.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send("user=" + jsonUser);	
 }
-</script>
-
 <h2>Rekisteröidy</h2>
 <form id='userlomake'>
 Kauttajatunnus: <input type='text' name='tunnus' value='' placeholder='Käyttäjätunnus...'><br>
@@ -33,5 +31,18 @@ Salasana: <input type='text' name='salasana' value='' placeholder='Salasana...'>
 <input type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'><br>
 </form>
 </script>
+<h1>Check Password</h1>
+<form action="/add" method="post">
+<input type="text" name="username" value="">
+<input type="password" name="password" value="">
+
+<input type="submit" name="send" value="Check">
+</form>
+<form action ="/add" method="post">
+<input type="text" name="username" value="">
+<input type="password" name="password" value="">
+
+<input type="submit" name="send" value="Add">
+</form>
 </body>
 </html>
