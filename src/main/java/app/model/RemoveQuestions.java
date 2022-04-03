@@ -29,7 +29,7 @@ public class RemoveQuestions extends HttpServlet {
 		else {
 			System.out.println("No connection to database");
 		}
-		request.setAttribute("questionlist", list);
+		request.setAttribute("questions", list);
 		RequestDispatcher rd=request.getRequestDispatcher("/jsp/RemoveQuestions.jsp");
 		rd.forward(request,  response);
 		
