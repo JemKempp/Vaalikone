@@ -18,10 +18,10 @@ public class RemoveQuestions extends HttpServlet {
 	throws IOException, ServletException {
 		
 		String id=request.getParameter("id");
-		ArrayList<Question> list=null;
+		ArrayList<Questions> list=null;
 		if (dao.getConnection()) {
 			
-		list=dao.RemoveQuestion(id);
+		list=dao.RemoveQuestions(id);
 		System.out.println("connected");
 		System.out.println(list);
 		
