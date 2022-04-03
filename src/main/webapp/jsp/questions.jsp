@@ -10,7 +10,7 @@
 <script language="php">
 package app.model;
 
-public class Questions extends Add.User {
+public class questions extends AddUser {
 	
 	@author
 	 */
