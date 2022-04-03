@@ -15,4 +15,4 @@ ${question.id}<br>
 ${question.whatquestion}<br>
 <a id="removeButton" href="removeQuestions?id=${question.id}">Poista kysymys</a><br>
 </c:forEach>
-<%@ include files="../footer.html" %>
+<%@ include files="../Footer.html" %>
