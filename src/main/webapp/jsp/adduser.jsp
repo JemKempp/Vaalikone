@@ -6,6 +6,14 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<style>
+body {
+background-image: url('https://us.123rf.com/450wm/pavlik18/pavlik181602/pavlik18160200019/52558800-hand-casts-ballot-in-the-ballot-box-in-elections-silhouette.jpg?ver=6');
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+}
+</style>
 <body>
 <script language="php">
 function lahetaKayttaja(lomake){
