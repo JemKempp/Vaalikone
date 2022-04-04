@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< Updated upstream
 Built-By: Tea
 Build-Jdk: 16.0.2
+=======
+Built-By: kirsi
+Build-Jdk: 11.0.14
+>>>>>>> Stashed changes
 Created-By: Maven Integration for Eclipse
 
