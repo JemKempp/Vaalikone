@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="app.model.CheckServlet" %>
+<%@ page import="app.model.Candidates" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,32 +18,16 @@
 	<th>ehdokas_id</th>
 	<th>vastaus</th>
 </tr>
-<c:forEach var="" items="${sessionScope.allkysymykset }">
+
+<c:forEach var="ehdokas" items="${sessionScope.allcandidates }">
 	<tr>
-		<td>${kysymys.id }</td>
+		<td>${ehdokas.ehdokas_id }</td>
 		<td>
-			<a href="/editkysymys?id=${kysymys.id }">Edit</a>
+			<a href="/editehdokas?id=${ehdokas.ehdokas_id }">Edit</a>
 		</td>
 	</tr>
 </c:forEach>
-</tr>
-<c:forEach var="" items="${sessionScope.allehdokkaat }">
-	<tr>
-		<td>${ehdokas.id }</td>
-		<td>
-			<a href="/editehdokas?id=${ehdokas.id }">Edit</a>
-		</td>
-	</tr>
-</c:forEach>
-</tr>
-<c:forEach var="" items="${sessionScope.allvastaukset }">
-	<tr>
-		<td>${vastaus }</td>
-		<td>
-			<a href="/editvastaus=${vastaus}">Edit</a>
-		</td>
-	</tr>
-</c:forEach>
+
 </table>
 
 </body>

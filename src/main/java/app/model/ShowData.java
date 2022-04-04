@@ -12,14 +12,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import app.dao.Dao;
+
 import app.model.Candidates;
 import app.model.Questions;
 import app.model.Vastaukset;
+import dao.Dao;
 
 @WebServlet(
         name = "ShowData",
-        urlPatterns = {"/showdata"}
+        urlPatterns = {"/Candidates"}
         )
 public class ShowData extends HttpServlet {
 
@@ -35,13 +36,13 @@ public class ShowData extends HttpServlet {
 
         session.setAttribute("allcandidates", candidates);
 
-        RequestDispatcher rd = request.getRequestDispatcher("jsp/showall.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("jsp/ShowAll.jsp");
         rd.forward(request, response);
 
     }
-    
+    /*
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) 
+    public void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws IOException, ServletException {
 
         // if sessions does not exist, create new one
@@ -73,7 +74,7 @@ public class ShowData extends HttpServlet {
         rd.forward(request, response);
 
     }
-
+*/
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws IOException, ServletException {
