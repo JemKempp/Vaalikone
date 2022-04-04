@@ -14,18 +14,33 @@
 
 <table>
 <tr>
-	<th>ID</th>
-	<th>Breed</th>
-	<th>Weight</th>
-	<th>Actions</th>
+	<th>kysymys_id</th>
+	<th>ehdokas_id</th>
+	<th>vastaus</th>
 </tr>
-<c:forEach var="game" items="${sessionScope.allgames }">
+<c:forEach var="" items="${sessionScope.allkysymykset }">
 	<tr>
-		<td>${game.id }</td>
-		<td>${game.breed }</td>
-		<td>${game.weight }</td>
+		<td>${kysymys.id }</td>
 		<td>
-			<a href="/editgame?id=${game.id }">Edit</a>
+			<a href="/editkysymys?id=${kysymys.id }">Edit</a>
+		</td>
+	</tr>
+</c:forEach>
+</tr>
+<c:forEach var="" items="${sessionScope.allehdokkaat }">
+	<tr>
+		<td>${ehdokas.id }</td>
+		<td>
+			<a href="/editehdokas?id=${ehdokas.id }">Edit</a>
+		</td>
+	</tr>
+</c:forEach>
+</tr>
+<c:forEach var="" items="${sessionScope.allvastaukset }">
+	<tr>
+		<td>${vastaus }</td>
+		<td>
+			<a href="/editvastaus=${vastaus}">Edit</a>
 		</td>
 	</tr>
 </c:forEach>
