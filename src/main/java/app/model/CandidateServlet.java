@@ -19,10 +19,10 @@ import app.model.Vastaukset;
 import dao.Dao;
 
 @WebServlet(
-        name = "ShowData",
+        name = "CandidateServlet",
         urlPatterns = {"/Candidates"}
         )
-public class ShowData extends HttpServlet {
+public class CandidateServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -36,7 +36,7 @@ public class ShowData extends HttpServlet {
 
         session.setAttribute("allcandidates", candidates);
 
-        RequestDispatcher rd = request.getRequestDispatcher("jsp/ShowAll.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("jsp/ShowCandidates.jsp");
         rd.forward(request, response);
 
     }
