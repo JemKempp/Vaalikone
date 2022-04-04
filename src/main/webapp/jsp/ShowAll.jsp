@@ -24,6 +24,15 @@
 		<td>${ehdokas.ehdokas_id }</td>
 		<td>
 			<a href="/editehdokas?id=${ehdokas.ehdokas_id }">Edit</a>
+			
+<h1>Ehdokkaan profiili</h1>
+<h2>${requestScope.ehdokkaat.etunimi} ${requestScope.ehdokkaat.sukunimi}</h2>
+<p><b>Puolue:</b> ${requestScope.ehdokkaat.puolue}</p><br>
+<p><b>Kotipaikkakunta:</b> ${requestScope.ehdokkaat.kotipaikkakunta}</p><br>
+<p><b>Ik‰:</b> ${requestScope.ehdokkaat.ika} </p><br>
+<p><b>Ammatti:</b> ${requestScope.ehdokkaat.ammatti}</p><br>
+<p><b>Miksi haluan eduskuntaan?:</b> ${requestScope.ehdokkaat.miksi_eduskuntaan}</p><br>
+<p><b>Mit‰ asioita haluan edist‰‰?:</b> ${requestScope.ehdokkaat.mita_asioita_haluat_edistaa}</p><br>
 		</td>
 	</tr>
 </c:forEach>
