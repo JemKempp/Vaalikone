@@ -1,6 +1,8 @@
-package data;
+package app.model;
 
-public class Vastaukset{
+import java.io.Serializable;
+
+public class Vastaukset implements Serializable{
 	private int ehdokas_id;
 	private int kysymys_id;
 	private int vastaus;

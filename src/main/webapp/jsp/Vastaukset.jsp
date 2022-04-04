@@ -5,9 +5,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<h1>Vastaukset</h1>
 </head>
 <body>
-<h1>Vastaa kysymyksiin</h1>
 
 </body>
 </html>
