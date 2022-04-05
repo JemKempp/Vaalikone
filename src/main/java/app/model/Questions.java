@@ -9,7 +9,7 @@ public class Questions implements Serializable{
 		// TODO Auto-generated constructor stub
 		setKysymys_id(kysymys_id);
 		this.kysymys=kysymys;
-		//comment
+		
 		
 	}
 	public Questions() {
