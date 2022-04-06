@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: Omistaja
+=======
+Built-By: kirsi
+>>>>>>> 910ff4fd1fa5bb42f410d56549a8e5781f7b894d
 Build-Jdk: 11.0.14
 Created-By: Maven Integration for Eclipse
 

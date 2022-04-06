@@ -1,6 +1,8 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+
 import java.sql.Statement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -99,8 +101,31 @@ public class Dao {
 	}
 
 
+	    /*
+	//Pyydetään ottamaan yhteys
+		public boolean getConnection() {
+			try {
+		        if (conn == null || conn.isClosed()) {
+		            try {
+		                Class.forName("com.mysql.jdbc.Driver").newInstance();
+		            } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+		                throw new SQLException(e);
+		            }
+		            conn = DriverManager.getConnection(url, user, pass);
+		        }
+		        return true;
+			}
+			catch (SQLException e) {
+				System.out.println(e.getMessage());
+				return false;
+				
+			}
+			
+			//Luetaan kaikki ehdottaat taulusta
+		}
+		*/
 	public ArrayList<Candidates> readAllCandidates()  {
-		ArrayList<Candidates> result = new ArrayList<Candidates>();
+		ArrayList<Candidates> list = new ArrayList<Candidates>();
 		
 		try {
             Statement stmt=conn.createStatement();
