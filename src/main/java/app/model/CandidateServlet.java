@@ -19,6 +19,59 @@ import app.model.Questions;
 import app.model.Vastaukset;
 import dao.Dao;
 
+/**
+ * Servlet implementation class AllCandidatesServlet
+ */
+@WebServlet("/AllCandidatesServlet")
+public class CandidateServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private dao.Dao dao=null;
+	
+	public void init() {
+
+		// connection_url_admin = jdbc:mysql://localhost:3306
+		// connection_url = jdbc:mysql://localhost:3306/vaalikone
+		String url = getServletContext().getInitParameter("connection_url");
+		String user = getServletContext().getInitParameter("username");
+		String password = getServletContext().getInitParameter("passwd");
+		
+		dao = new Dao(url, user, password);
+
+		// dao=new DAO.Dao("jdbc:mysql://localhost:3306/vaalikone", "user", "password");
+	}
+	
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public CandidateServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		
+		ArrayList<Candidates> list=null;
+		if (dao.getConnection()){
+			list=dao.readAllCandidates();
+		}
+		else {
+			System.out.println("No connection to database");
+		}
+		request.setAttribute("Candidates", list);
+		
+		RequestDispatcher rd=request.getRequestDispatcher("/jsp/AllCandidatesJSP.jsp");
+		rd.forward(request, response);
+		
+	}
+		
+		
+/*
 @WebServlet(
         name = "CandidateServlet",
         urlPatterns = {"/Candidates"}
@@ -41,6 +94,7 @@ public class CandidateServlet extends HttpServlet {
         rd.forward(request, response);
 
     }
+    */
     /*
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) 
