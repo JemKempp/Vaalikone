@@ -26,7 +26,7 @@ public class Dao {
 	        this.user=user;
 	        this.pass=pass;
 	    }
-
+/*
 	// When new instance is created, also DB-connection is created
 	public Dao() {
 		try {
@@ -100,8 +100,8 @@ public class Dao {
 		return result;
 	}
 
-
-	    /*
+*/
+	    
 	//Pyydetään ottamaan yhteys
 		public boolean getConnection() {
 			try {
@@ -123,7 +123,7 @@ public class Dao {
 			
 			//Luetaan kaikki ehdottaat taulusta
 		}
-		*/
+		
 	public ArrayList<Candidates> readAllCandidates()  {
 		ArrayList<Candidates> list = new ArrayList<Candidates>();
 		

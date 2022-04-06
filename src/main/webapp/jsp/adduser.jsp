@@ -15,6 +15,7 @@ background-image: url('https://static.scientificamerican.com/sciam/cache/file/2A
 }
 </style>
 <body>
+<%-- 
 <script language="php">
 function lahetaKayttaja(lomake){
 var user=new Object();
@@ -39,6 +40,7 @@ Salasana: <input type='text' name='salasana' value='' placeholder='Salasana...'>
 <input type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'><br>
 </form>
 </script>
+--%>
 <h1>Check Password</h1>
 <form action="/add" method="post">
 <input type="text" name="username" value="">

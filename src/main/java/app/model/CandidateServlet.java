@@ -20,9 +20,9 @@ import app.model.Vastaukset;
 import dao.Dao;
 
 /**
- * Servlet implementation class AllCandidatesServlet
+ * Servlet implementation class CandidatesServlet
  */
-@WebServlet("/AllCandidatesServlet")
+@WebServlet("/CandidatesServlet")
 public class CandidateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private dao.Dao dao=null;
@@ -65,7 +65,7 @@ public class CandidateServlet extends HttpServlet {
 		}
 		request.setAttribute("Candidates", list);
 		
-		RequestDispatcher rd=request.getRequestDispatcher("/jsp/AllCandidatesJSP.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/jsp/ShowCandidates.jsp");
 		rd.forward(request, response);
 		
 	}
