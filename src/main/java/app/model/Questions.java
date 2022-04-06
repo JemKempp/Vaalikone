@@ -10,6 +10,7 @@ public class Questions implements Serializable{
 		setKysymys_id(kysymys_id);
 		this.kysymys=kysymys;
 		
+		
 	}
 	public Questions() {
 		// TODO Auto-generated constructor stub
