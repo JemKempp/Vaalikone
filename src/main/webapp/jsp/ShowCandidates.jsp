@@ -31,8 +31,8 @@
     </li>
     <td>
 			<a href="/editcandidate?id=${ehdokas.id }">Edit</a>
+			
 		</td>
-	<td>
 		
 
 </c:forEach>
