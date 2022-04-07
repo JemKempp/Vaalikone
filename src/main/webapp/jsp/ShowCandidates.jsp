@@ -17,7 +17,7 @@
 <c:forEach var="candidates" items="${sessionScope.allcandidates }">
 
     <li>
-    
+
     <ol>Ehdokkaan numero: ${candidates.ehdokas_id }</ol>
     <ol>Sukunimi: ${candidates.sukunimi } </ol>
     <ol>Etunimi: ${candidates.etunimi }</ol>
@@ -27,13 +27,13 @@
     <ol>Miksi eduskuntaan: ${candidates.miksi_eduskuntaan }</ol>
     <ol>Mitä asioita haluat edistää: ${candidates.mita_asioita_haluat_edistaa }</ol>
     <ol>Ammatti: ${candidates.ammatti }</ol>
-    
+
     <td>
-			<a href="/editcandidate?id=${ehdokas.id }">Edit</a>
-		</td>
+            <a href="/editcandidate?id=${ehdokas.id }">Edit</a>
+        </td>
     </li>
-    
-		
+
+
 
 </c:forEach>
 </table>

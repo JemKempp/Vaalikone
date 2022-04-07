@@ -26,7 +26,7 @@ package app.model;
 		@Override
 		public void doGet(HttpServletRequest request, HttpServletResponse response) 
 		     throws IOException {
-			response.sendRedirect("index.html");
+			response.sendRedirect("/jsp/editcandidate.jsp");
 		}
 		public void doPost(HttpServletRequest request, HttpServletResponse response) 
 		     throws IOException, ServletException {
@@ -44,7 +44,7 @@ package app.model;
 			
 			ArrayList<Candidates> list=null;
 			if (dao.getConnection()) {
-				list=dao.updateCandidate(e);
+				list=dao.editcandidate(e);
 			}
 			
 			request.setAttribute("candidateslist", list);

@@ -17,6 +17,7 @@ Ik‰: <input type='text' name='ika' size="35" value='${sessionScope.candidates.ik
 Ammatti: <input type='text' name='ammatti' size="35" value='${sessionScope.candidates.ammatti}'><br>
 Miksi haluan eduskuntaan?: <input type='text' name='miksi_eduskuntaan' size="35" value='${sessionScope.candidates.miksi_eduskuntaan}'><br>
 Mit‰ asioita haluan edist‰‰?: <input type='text' size="35" name='mita_asioita_haluat_edistaa' value='${sessionScope.candidates.mita_asioita_haluat_edistaa}'><br>
+Mit‰ asioita haluan edist‰‰?: <input type='text' size="35" name='mita_asioita_haluat_edistaa' value='${requestScope.candidates.mita_asioita_haluat_edistaa}'><br>
 <input type='submit' name='ok' value='Send'> 
 </form>
 </body>

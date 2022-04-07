@@ -197,7 +197,7 @@ public class Dao {
             return null;
         }
     }
-	public ArrayList<Candidates> updateCandidate(Candidates e) {
+	public ArrayList<Candidates> editcandidate(Candidates e) {
         try {
             String sql="update ehdokkaat set etunimi=?, sukunimi=?, puolue=?, kotipaikkakunta=?, ika=?, miksi_eduskuntaan=?, mita_asioita_haluat_edistaa=?, ammatti=? where ehdokas_id=?";
             PreparedStatement pstmt=conn.prepareStatement(sql);
@@ -327,7 +327,7 @@ public class Dao {
             return null;
         }
     }
-    public ArrayList<Candidates> lisaaCandidate(Candidates e) {
+    public ArrayList<Candidates> AddCandidate(Candidates e) {
         try {
             String sql="insert into ehdokkaat(ehdokas_id, etunimi, sukunimi, puolue, kotipaikkakunta, ika, miksi_eduskuntaan, mita_asioita_haluat_edistaa, ammatti) values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement pstmt=conn.prepareStatement(sql);
