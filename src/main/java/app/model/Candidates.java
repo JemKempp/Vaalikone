@@ -100,4 +100,9 @@ public class Candidates implements Serializable{
 		this.ammatti= ammatti;
 	}
 	
+
+public String toString() {
+    return ehdokas_id+" "+sukunimi+" "+etunimi+" "+puolue+" "+kotipaikkakunta+" "+ika+
+            " "+miksi_eduskuntaan+" "+mita_asioita_haluat_edistaa+" "+ammatti;
+}
 }

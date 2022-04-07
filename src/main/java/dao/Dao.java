@@ -50,6 +50,35 @@ public class Dao {
 			e.printStackTrace();
 		}
 	}
+	public Candidates getCandidatesInfo(int ehdokas_id) {
+		Candidates result = null;
+        String sql = "select * from ehdokkaat where ehdokas_id = ?";
+        try {
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, ehdokas_id);
+
+            ResultSet resultset = stmt.executeQuery();
+
+            if (resultset.next()) {
+                result = new Candidates();
+                result.setEhdokas_id(resultset.getInt("ehdokas_id"));
+                result.setSukunimi(resultset.getString("sukunimi"));
+                result.setEtunimi(resultset.getString("etunimi"));
+                result.setPuolue(resultset.getString("puolue"));
+                result.setKotipaikkakunta(resultset.getString("kotipaikkakunta"));
+                result.setIka(resultset.getInt("ika"));
+                result.setMiksi_eduskuntaan(resultset.getString("miksi_eduskuntaan"));
+                result.setMita_asioita_haluat_edistaa(resultset.getString("mita_asioita_haluat_edistaa"));
+                result.setAmmatti(resultset.getString("ammatti"));
+
+            }
+        }catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            }
+        return result;
+            }
 
 	// Manually close DB-connection for releasing resource
 	public void close() {
