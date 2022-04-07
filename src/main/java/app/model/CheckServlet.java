@@ -2,12 +2,14 @@ package app.model;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.Dao;
 
@@ -21,11 +23,11 @@ public class CheckServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 	throws IOException, ServletException {
 		
-		response.sendRedirect("index.html");
+		response.sendRedirect("/jsp/adduser.jsp");
 	}
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
-	throws IOException {
+	throws IOException, ServletException {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		
@@ -39,11 +41,17 @@ public class CheckServlet extends HttpServlet {
 		
 		dao.close();
 		
-		if ( Security.isPasswordOk(hashpw, password, salt) ) {
-			response.getWriter().println("Login success");
-		} else {
-			response.getWriter().println("Login failed");
-		}
-		
-	}
-}
+		if (Security.isPasswordOk(hashpw, password, salt)) {
+           /* response.sendRedirect("/jsp/vastaavaalikoneeseen.jsp");*/
+			response.getWriter().println("Kirjautuminen onnistui!");
+            HttpSession session = request.getSession();
+
+            session.setAttribute("LoggedUser", uname);
+        } else {
+            response.getWriter().println("Login failed");
+        }
+
+        RequestDispatcher rd = request.getRequestDispatcher("index.html");
+        rd.forward(request, response);
+        }
+        }

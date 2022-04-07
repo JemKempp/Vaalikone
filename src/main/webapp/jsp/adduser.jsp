@@ -42,7 +42,7 @@ Salasana: <input type='text' name='salasana' value='' placeholder='Salasana...'>
 </script>
 --%>
 <h1>Check Password</h1>
-<form action="/add" method="post">
+<form action="/check" method="post">
 <input type="text" name="username" value="">
 <input type="password" name="password" value="">
 

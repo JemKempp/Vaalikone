@@ -26,7 +26,20 @@ public class Dao {
 	        this.user=user;
 	        this.pass=pass;
 	    }
-/*
+	    
+	    public int saveVaalikone(Candidates candidates) {
+	        Statement stmt=null;
+	        int count=0;
+	        try {
+	            stmt = conn.createStatement();
+	            count=stmt.executeUpdate("insert into ehdokkaat(ehdokas_id, sukunimi, etunimi, puolue, kotipaikkakunta, ika, miksi_eduskuntaan, mita_asioita_haluat_edistaa, ammatti) values('"+candidates.getEhdokas_id()+"','"+candidates.getSukunimi()+"', '"+candidates.getEtunimi()+"', '"+candidates.getPuolue()+"', '"+candidates.getKotipaikkakunta()+"', "+candidates.getIka()+", '"+candidates.getMiksi_eduskuntaan()+"', '"+candidates.getMita_asioita_haluat_edistaa()+"', '"+candidates.getAmmatti()+"')");
+	        }catch (SQLException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        }
+	        return count;
+	        }
+
 	// When new instance is created, also DB-connection is created
 	public Dao() {
 		try {
@@ -100,9 +113,13 @@ public class Dao {
 		return result;
 	}
 
+
+/*	    
+	public Dao() {
+			// TODO Auto-generated constructor stub
+		}
 */
-	    
-	//Pyydetään ottamaan yhteys
+		//Pyydetään ottamaan yhteys
 		public boolean getConnection() {
 			try {
 		        if (conn == null || conn.isClosed()) {
@@ -300,4 +317,9 @@ public class Dao {
             return null;
         }
     }
+
+	public void AddUser(String uname, String hashpw, String salt) {
+		// TODO Auto-generated method stub
+		
+	}
 }
