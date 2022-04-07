@@ -90,6 +90,7 @@ public class Dao {
 		}
 	}
 	public void addUser(String username, String pw, String salt) {
+		
 		String sql = "insert into useraccount (username, hashedpassword, salt) values (?,?,?)";
 		try {
 			PreparedStatement stmt = conn.prepareStatement(sql);
@@ -347,8 +348,4 @@ public class Dao {
         }
     }
 
-	public void AddUser(String uname, String hashpw, String salt) {
-		// TODO Auto-generated method stub
-		
-	}
 }

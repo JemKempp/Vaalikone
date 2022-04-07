@@ -29,16 +29,18 @@ public class AddUser extends HttpServlet {
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 	throws IOException {
-		
+
 		Dao dao = new Dao();
 		
 		String uname = request.getParameter("username");
 		String password = request.getParameter("password");
+
 		
 		String salt = Security.getSalt();
 		String hashpw = Security.getPasswordHashed(password, salt);
+	
 		
-		dao.AddUser(uname,  hashpw, salt);
+		dao.addUser(uname,  hashpw, salt);
 		
 		dao.close();
 		response.sendRedirect("/jsp/adduser.jsp");
