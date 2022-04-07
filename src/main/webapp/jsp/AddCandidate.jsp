@@ -4,7 +4,12 @@
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
     
-
+<style>
+body {
+text-align: center;
+}
+</style>
+<body>
 <div class="container">
 <div class="row">
 <div class="col-9">
@@ -20,6 +25,7 @@ Ammatti: <input type='text' name='ammatti' size="35" value=''><br>
 Miksi haluan eduskuntaan?: <input type='text' name='miksi_eduskuntaan' size="35" value=''><br>
 Mitä asioita haluan edistää?: <input type='text' name='mita_asioita_haluat_edistaa' size="35" value=''><br>
 <input type='submit' name='ok' value='Send'> 
+</body>
 </form>
 </div>
 </div>
