@@ -41,18 +41,20 @@ Salasana: <input type='text' name='salasana' value='' placeholder='Salasana...'>
 </form>
 </script>
 --%>
-<h1>Check Password</h1>
+<h1>Kirjaudu sis‰‰n</h1>
 <form action="/check" method="post">
 <input type="text" name="username" value="">
 <input type="password" name="password" value="">
 
 <input type="submit" name="send" value="Check">
 </form>
+<h1>Lis‰‰ k‰ytt‰j‰</h1>
 <form action ="/add" method="post">
 <input type="text" name="username" value="">
 <input type="password" name="password" value="">
 
 <input type="submit" name="send" value="Add">
 </form>
+<a href="/logout">Logout</a>
 </body>
 </html>

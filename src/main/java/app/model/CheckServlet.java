@@ -47,6 +47,7 @@ public class CheckServlet extends HttpServlet {
             HttpSession session = request.getSession();
 
             session.setAttribute("LoggedUser", uname);
+            
         } else {
             response.getWriter().println("Login failed");
         }
