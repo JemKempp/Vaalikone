@@ -2,6 +2,7 @@ package app.model;
 
 import java.io.Serializable;
 
+
 public class Candidates implements Serializable{
 	private int ehdokas_id;
 	private String etunimi;

@@ -5,6 +5,8 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Base64;
 
+import javax.servlet.http.HttpSession;
+
 public class Security {
 	
 	public static String getPasswordHashed(String password, String salt) {
@@ -39,4 +41,12 @@ public class Security {
 			}
 			return false;
 			}
-		}
+		
+public static boolean isUserLogged(HttpSession session) {
+
+    if (session != null && session.getAttribute("LoggedUser") != null) {
+    return true;
+    }
+    return false;
+    }
+    }
