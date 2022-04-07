@@ -15,8 +15,8 @@ import dao.Dao;
 
 
 @WebServlet(
-    name = "DeleteEhdokas",
-    urlPatterns = {"/deleteehdokas"}
+    name = "DeleteCandidates",
+    urlPatterns = {"/deleteCandidates"}
 )
 public class DeleteCandidates extends HttpServlet {
 

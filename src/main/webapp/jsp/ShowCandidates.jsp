@@ -29,7 +29,9 @@
     <ol>Ammatti: ${candidates.ammatti }</ol>
 
     <td>
-            <a href="/editcandidate?id=${ehdokas.id }">Edit</a>
+            <a href="/editcandidate?id=${ehdokas.id }">Muokkaa</a>
+            <a href="/DeleteCandidates?id=${ehdokas.id }">Poista</a>
+            
         </td>
     </li>
 
