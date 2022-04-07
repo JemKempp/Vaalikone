@@ -28,11 +28,11 @@
     <ol>Mit‰ asioita haluat edist‰‰: ${candidates.mita_asioita_haluat_edistaa }</ol>
     <ol>Ammatti: ${candidates.ammatti }</ol>
     
-    </li>
     <td>
 			<a href="/editcandidate?id=${ehdokas.id }">Edit</a>
-			
 		</td>
+    </li>
+    
 		
 
 </c:forEach>
