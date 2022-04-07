@@ -9,7 +9,7 @@
 <div class="row">
 <div class="col-9">
 
-<form action='lisaaehdokas' method='post'> 
+<form action='/showcandidates' method='post'> 
 
 Ehdokkaan etunimi: <input type='text' name='etunimi' size="35" value=''><br>
 Ehdokkaan sukunimi: <input type='text' name='sukunimi' size="35" value=''><br>
