@@ -7,6 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form action='editcandidate' method='post'>
+Ehdokas id: <input type='text' name='ehdokas_id' size="35" value='${requestScope.candidates.ehdokas_id}' readonly><br> 
+Ehdokkaan etunimi: <input type='text' name='etunimi' size="35" value='${requestScope.candidates.etunimi}'><br>
+Ehdokkaan sukunimi: <input type='text' name='sukunimi' size="35" value='${requestScope.candidates.sukunimi}'><br>
+Ehdokkaan puolue: <input type='text' name='puolue' size="35" value='${requestScope.candidates.puolue}'><br>
+Kotipaikkakunta: <input type='text' name='kotipaikkakunta' size="35" value='${requestScope.candidates.kotipaikkakunta}'><br>
+Ik‰: <input type='text' name='ika' size="35" value='${requestScope.candidates.ika}'><br>
+Ammatti: <input type='text' name='ammatti' size="35" value='${requestScope.candidates.ammatti}'><br>
+Miksi haluan eduskuntaan?: <input type='text' name='miksi_eduskuntaan' size="35" value='${requestScope.candidates.miksi_eduskuntaan}'><br>
+Mit‰ asioita haluan edist‰‰?: <input type='text' size="35" name='mita_asioita_haluat_edistaa' value='${requestScope.candidates.mita_asioita_haluat_edistaa}'><br>
+<input type='submit' name='ok' value='Send'> 
+</form>
 </body>
 </html>
