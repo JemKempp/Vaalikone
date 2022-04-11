@@ -10,8 +10,9 @@ package app.model;
 	import javax.servlet.http.HttpServlet;
 	import javax.servlet.http.HttpServletRequest;
 	import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-	import dao.Dao;
+import dao.Dao;
 	import app.model.Candidates;
 
 	@WebServlet(
@@ -21,11 +22,14 @@ package app.model;
 	public class editcandidate extends HttpServlet {
 		private Dao dao;
 		public void init() {
-			dao=new Dao("jdbc:mysql://localhost:3306/vaalikone", "jkt", "riina");
+			dao=new Dao();
 		}
 		@Override
 		public void doGet(HttpServletRequest request, HttpServletResponse response) 
 		     throws IOException {
+			Candidates c=dao.readCandidate(request.getParameter("id"));
+			HttpSession session = request.getSession();
+			session.setAttribute("candidates", c);
 			response.sendRedirect("/jsp/editcandidate.jsp");
 		}
 		public void doPost(HttpServletRequest request, HttpServletResponse response) 
