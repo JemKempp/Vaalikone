@@ -34,6 +34,12 @@ import dao.Dao;
 		}
 		public void doPost(HttpServletRequest request, HttpServletResponse response) 
 		     throws IOException, ServletException {
+			/*
+			Candidates c=dao.saveVaalikone(request.getParameter("id"));
+			HttpSession session = request.getSession();
+			session.setAttribute("candidates", c);
+			*/
+			response.sendRedirect("/jsp/editcandidate.jsp");
 			String ehdokas_id=request.getParameter("ehdokas_id");
 			String etunimi=request.getParameter("etunimi");
 			String sukunimi=request.getParameter("sukunimi");
@@ -55,4 +61,5 @@ import dao.Dao;
 			RequestDispatcher rd=request.getRequestDispatcher("/jsp/admin.jsp");
 			rd.forward(request, response);
 		}
+
 	}
