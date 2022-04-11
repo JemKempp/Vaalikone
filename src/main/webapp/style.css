@@ -39,3 +39,16 @@ background-color: #eeeee4;
   		color: white;
   		text-align: center;
 		}
+		
+		.button {
+  		font-family: Arial, Helvetica, sans-serif;
+  		background-color: white;
+  		color: black;
+  		border: 2px solid #333333;
+  		padding: 4px 14px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+  		font-size: 16px;
+  		transition-duration: 0.4s;
+		}
