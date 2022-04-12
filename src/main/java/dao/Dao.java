@@ -175,7 +175,7 @@ public class Dao {
 		
 		
 	public ArrayList<Candidates> readAllCandidates()  {
-		ArrayList<Candidates> list = new ArrayList<Candidates>();
+		ArrayList<Candidates> list = new ArrayList<>();
 		
 		try {
             Statement stmt=conn.createStatement();
@@ -195,11 +195,13 @@ public class Dao {
                 list.add(e);
             }
             return list;
-        }
-        catch(SQLException s) {
+		}
+		catch(SQLException s) {
             return null;
         }
-    }
+	}
+        
+    
 	
 	public ArrayList<Candidates> editcandidate(Candidates e) {
         try {
