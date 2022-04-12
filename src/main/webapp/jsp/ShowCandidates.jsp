@@ -11,7 +11,15 @@
 <title>All datatable rows</title>
 </head>
 <body>
-<div class="taustakuva">
+<style>
+body {
+background-image: url('https://images.pexels.com/photos/8892/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+        background-repeat: no-repeat;
+        background-size: cover;
+		text-align: center;
+		color: white;
+}
+</style>
 
 <table>
 
@@ -42,6 +50,5 @@
 </table>
 
 
-</div>
 </body>
 </html>
