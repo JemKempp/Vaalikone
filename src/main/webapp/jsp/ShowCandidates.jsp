@@ -11,6 +11,7 @@
 <title>All datatable rows</title>
 </head>
 <body>
+<div class="taustakuva">
 
 <table>
 
@@ -41,6 +42,6 @@
 </table>
 
 
-
+</div>
 </body>
 </html>

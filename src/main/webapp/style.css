@@ -15,6 +15,9 @@ background-color: #eeeee4;
         text-align: center;
             
         }
+        .taustakuva {
+        background-image: url('https://static.scientificamerican.com/sciam/cache/file/2A451F1D-3FC5-4438-A1DFB859DF8D3AEB_source.jpg?w=590&h=800&4F353870-AA79-41FA-AFBAAEF4F774E4A0');
+        }
                 .questions{
         text-align: center;
             
