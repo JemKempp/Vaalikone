@@ -149,6 +149,7 @@ public class Dao {
 			// TODO Auto-generated constructor stub
 		}
 */
+	
 		//Pyydetään ottamaan yhteys
 		public boolean getConnection() {
 			try {
@@ -168,8 +169,10 @@ public class Dao {
 				
 			}
 			
+			
 			//Luetaan kaikki ehdottaat taulusta
 		}
+		
 		
 	public ArrayList<Candidates> readAllCandidates()  {
 		ArrayList<Candidates> list = new ArrayList<Candidates>();
@@ -197,6 +200,7 @@ public class Dao {
             return null;
         }
     }
+	
 	public ArrayList<Candidates> editcandidate(Candidates e) {
         try {
             String sql="update ehdokkaat set etunimi=?, sukunimi=?, puolue=?, kotipaikkakunta=?, ika=?, miksi_eduskuntaan=?, mita_asioita_haluat_edistaa=?, ammatti=? where ehdokas_id=?";
@@ -217,18 +221,27 @@ public class Dao {
             return null;
         }
     }
-    public ArrayList<Candidates> deleteCandidate(String ehdokas_id) {
+    
+    
+	
+
+
+    public int deleteCandidate(int Ehdokas_id) throws SQLException {
+
+        int count = 0;
+        String sql = "DELETE from ehdokkaat WHERE Ehdokas_id=?";
         try {
-            String sql="delete from ehdokkaat where ehdokas_id=?";
-            PreparedStatement pstmt=conn.prepareStatement(sql);
-            pstmt.setString(1, ehdokas_id);
-            pstmt.executeUpdate();
-            return readAllCandidates();
+            PreparedStatement stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, Ehdokas_id);
+
+            count = stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        catch(SQLException s) {
-            return null;
-        }
+        return count;
     }
+    
     public Candidates readCandidate(String ehdokas_id) {
         Candidates e=null;
         try {
