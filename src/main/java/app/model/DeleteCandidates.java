@@ -1,7 +1,10 @@
 package app.model;
 
 import java.io.IOException;
-
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -15,67 +18,68 @@ import javax.servlet.http.HttpSession;
 import dao.Dao;
 import app.model.Candidates;
 
-
 @WebServlet(
-    name = "DeleteCandidates",
-    urlPatterns = {"/deleteCandidates"}
-)
+		name = "DeleteCandidates",
+		urlPatterns = {"/deletecandidates"}
+		)
 public class DeleteCandidates extends HttpServlet {
-	private static final long serialVersionUID = 1L;
 
-    public DeleteCandidates() {
-        super();
-    }
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		// Information needed to check session status
-		response.setContentType("text/html");
-		HttpSession session=request.getSession(false);
-		String myName = (String)session.getAttribute("uname");
-		
-		// Checking is there a current session
-	    if (myName != null) {
-	    	String id = request.getParameter("id");
-	    	ArrayList<Candidates> list = null;
-	    	
-	    	// Checking that there is given an id so can delete
-	    	if (id != null) {
-	    		list = Dao.deleteCandidate(id);
-		    	response.sendRedirect("/candidates");
-		    	
-	    	}
-	    	
-	    	// If no id was given
-	    	else {
-	    		response.sendRedirect("/candidates");
-	    		
-	    	}
-	    	
-	    }
-	    
-	    // If there is no session
-	    else {
-	    	response.sendRedirect("http://localhost:8080/");
-	    }
-		
-	}
-
-/*
-	private Dao dao;
-	public void init() {
-		dao=new Dao();
-	}
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 
-	     throws IOException, ServletException {
-		String ehdokas_id=request.getParameter("ehdokas_id");
-		ArrayList<Candidates> list=null;
-		if (dao.getConnection()) {
-			list=dao.deleteCandidate(ehdokas_id);
+			throws IOException, ServletException {
+		// if sessions does not exist, create new one
+		HttpSession session = request.getSession();
+
+		String idValue = request.getParameter("ehdokas_id");
+
+		if (idValue != null ) {
+			try {
+				int id = Integer.parseInt(idValue);
+
+				Dao dao = new Dao();
+				Candidates candidate = dao.getCandidatesInfo(id);
+
+				session.setAttribute("candidate", candidate);
+
+				RequestDispatcher rd = request.getRequestDispatcher("jsp/deletecandidates.jsp");
+				rd.forward(request, response);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			// Back to list
+			response.sendRedirect("jsp/DeleteCandidates.jsp");
 		}
-		request.setAttribute("candidatelist", list);
-		RequestDispatcher rd=request.getRequestDispatcher("index.html");
-		rd.forward(request, response);
 	}
-	*/
+	@Override
+	public void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws IOException, ServletException {
+			
+		// Create connection
+		
+		Dao dao=new Dao();
+
+
+		
+		try {
+			dao.deleteCandidate(Integer.parseInt(request.getParameter("ehdokas_id")));
+			
+		} catch (NumberFormatException e) {
+			
+			e.printStackTrace();
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+	
+
+		dao.close();
+
+		// Back to list after actions
+		response.sendRedirect("/showcandidates");
+	}
 }
+
+
+

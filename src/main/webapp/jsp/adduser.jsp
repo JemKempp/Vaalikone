@@ -15,32 +15,7 @@ background-image: url('https://static.scientificamerican.com/sciam/cache/file/2A
 }
 </style>
 <body>
-<%-- 
-<script language="php">
-function lahetaKayttaja(lomake){
-var user=new Object();
-user.tunnus=lomake.tunnus.value;
-user.salasana=lomake.salasana.value;
-var jsonUser=JSON.stringify(user);
 
-xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-if (this.readyState == 4 && this.status == 200){
-document.getElementById("result").innerHTML = this.responseText;
-}
-};
-xmlhttp.open("POST", "../php/rekisteroidy.php", true);
-	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.send("user=" + jsonUser);	
-}
-<h2>Rekisteröidy</h2>
-<form id='userlomake'>
-Kauttajatunnus: <input type='text' name='tunnus' value='' placeholder='Käyttäjätunnus...'><br>
-Salasana: <input type='text' name='salasana' value='' placeholder='Salasana...'><br>
-<input type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'><br>
-</form>
-</script>
---%>
 <h1>Kirjaudu sisään</h1>
 <form action="/check" method="post">
 <input type="text" name="username" value="">
