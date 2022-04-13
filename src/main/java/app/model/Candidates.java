@@ -27,7 +27,7 @@ public class Candidates implements Serializable{
 		this.ammatti=ammatti;
 	}
 	public Candidates() {
-		// TODO Auto-generated constructor stub
+		// branch test
 	}
 	public int getEhdokas_id() {
 		return ehdokas_id;
