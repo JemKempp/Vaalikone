@@ -15,7 +15,7 @@ public class Candidates implements Serializable{
 	private String ammatti;
 	
 	public Candidates(String ehdokas_id, String etunimi, String sukunimi, String puolue, String kotipaikkakunta, String ika, String miksi_eduskuntaan, String mita_asioita_haluat_edistaa, String ammatti) {
-		// TODO Auto-generated constructor stub
+		// test
 		setEhdokas_id(ehdokas_id);
 		this.etunimi=etunimi;
 		this.sukunimi=sukunimi;
