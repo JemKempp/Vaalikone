@@ -72,7 +72,7 @@ public class DeleteCandidates extends HttpServlet {
 			
 			e.printStackTrace();
 		}
-	
+	//test github tea
 
 		dao.close();
 
