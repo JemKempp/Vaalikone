@@ -61,7 +61,7 @@ public class DeleteCandidates extends HttpServlet {
 		Dao dao=new Dao();
 
 
-		
+		//test github
 		try {
 			dao.deleteCandidate(Integer.parseInt(request.getParameter("ehdokas_id")));
 			
@@ -72,7 +72,7 @@ public class DeleteCandidates extends HttpServlet {
 			
 			e.printStackTrace();
 		}
-	
+	//test github tea
 
 		dao.close();
 
