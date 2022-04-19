@@ -15,7 +15,7 @@ public class Candidates implements Serializable{
 	private String ammatti;
 	
 	public Candidates(String ehdokas_id, String etunimi, String sukunimi, String puolue, String kotipaikkakunta, String ika, String miksi_eduskuntaan, String mita_asioita_haluat_edistaa, String ammatti) {
-		// TODO Auto-generated constructor stub
+		// test
 		setEhdokas_id(ehdokas_id);
 		this.etunimi=etunimi;
 		this.sukunimi=sukunimi;
@@ -27,7 +27,7 @@ public class Candidates implements Serializable{
 		this.ammatti=ammatti;
 	}
 	public Candidates() {
-		// TODO Auto-generated constructor stub
+		// branch test
 	}
 	public int getEhdokas_id() {
 		return ehdokas_id;
@@ -78,7 +78,7 @@ public class Candidates implements Serializable{
 			this.ika = Integer.parseInt(ika);
 		}
 		catch(NumberFormatException | NullPointerException e) {
-			//Do nothing - the value of id won't be changed
+			//
 		}
 	}
 	public String getMiksi_eduskuntaan() {
