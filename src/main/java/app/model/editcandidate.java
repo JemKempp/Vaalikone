@@ -128,7 +128,6 @@ import dao.Dao;
 			session.setAttribute("candidates", c);
 			*/
 
-			response.sendRedirect("/jsp/editcandidate.jsp");
 			String ehdokas_id=request.getParameter("ehdokas_id");
 			String etunimi=request.getParameter("etunimi");
 			String sukunimi=request.getParameter("sukunimi");
@@ -147,7 +146,7 @@ import dao.Dao;
 			}
 			
 			request.setAttribute("candidateslist", list);
-			RequestDispatcher rd=request.getRequestDispatcher("/jsp/admin.jsp");
+			RequestDispatcher rd=request.getRequestDispatcher("./showcandidates");
 			rd.forward(request, response);
 		}
 

@@ -16,7 +16,7 @@ background-image: url('https://static.scientificamerican.com/sciam/cache/file/2A
 		color: white;
 }
 </style>
-<form action='editcandidate' method='post'>
+<form action='/editcandidate' method='post' accept-charset="utf-8">
 Ehdokas id: <input type='text' name='ehdokas_id' size="35" value='${sessionScope.candidates.ehdokas_id}' readonly><br> 
 Ehdokkaan etunimi: <input type='text' name='etunimi' size="35" value='${sessionScope.candidates.etunimi}'><br>
 Ehdokkaan sukunimi: <input type='text' name='sukunimi' size="35" value='${sessionScope.candidates.sukunimi}'><br>

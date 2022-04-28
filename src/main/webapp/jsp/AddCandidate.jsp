@@ -17,7 +17,7 @@ background-image: url('https://static.scientificamerican.com/sciam/cache/file/2A
 <div class="row">
 <div class="col-9">
 
-<form action='/showcandidates' method='post'> 
+<form action='/addcandidate' method='post'> 
 
 Ehdokkaan etunimi: <input type='text' name='etunimi' size="35" value=''><br>
 Ehdokkaan sukunimi: <input type='text' name='sukunimi' size="35" value=''><br>

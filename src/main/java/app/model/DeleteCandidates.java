@@ -30,7 +30,7 @@ public class DeleteCandidates extends HttpServlet {
 		// if sessions does not exist, create new one
 		HttpSession session = request.getSession();
 
-		String idValue = request.getParameter("ehdokas_id");
+		String idValue = request.getParameter("id");
 
 		if (idValue != null ) {
 			try {

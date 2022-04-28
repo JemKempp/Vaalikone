@@ -37,7 +37,7 @@ background-image: url('https://static.scientificamerican.com/sciam/cache/file/2A
     <ol>Mit‰ asioita haluat edist‰‰: ${candidates.mita_asioita_haluat_edistaa }</ol>
     <ol>Ammatti: ${candidates.ammatti }</ol>
             <a href="/editcandidate?id=${candidates.ehdokas_id }">Muokkaa</a>
-            <a href="/DeleteCandidates?id=${candidates.ehdokas_id }">Poista</a>
+            <a href="/deletecandidates?id=${candidates.ehdokas_id }">Poista</a>
     <td>
            
             
